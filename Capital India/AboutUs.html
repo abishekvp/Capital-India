@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    
+<style>
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fadex {
+  animation-name: fadex;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadex {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.containerimg {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+      img {
+        max-width: 100%
+      }
+      .imageimg {
+        flex-basis: 40%
+      }
+      .textimg {
+        font-size: 20px;
+        padding-left: 20px;
+      }
+    </style>
+ 
+    <link href="img/favicon.ico" rel="icon">
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+ 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+   
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+        <a class="logo-image larger-devices" href="index.html"><img src="images/cclogo.png" alt="alternative"></a>
+        <!-- <a class="navbar-brand logo-image mobile-only" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  -->
+        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="./index.html#header">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="./AboutUs.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="./Service.html">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="./Projects.html">PROJECTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="https://capitalengg.com/jobs/">CAREERS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="./Contact.html">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+   
+    <div class="container-fluid bg-dark p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>123 Street, New York, USA</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+012 345 6789</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center mx-n2">
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+   
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+        </div>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="text-primary">About Us</h1>
+            </div>
+       </div>
+        <p><img src="images/right.jpg" align="right" width="500px" height="380px" valign="middle" vspace="5" hspace="5" style="margin-left: 30px;"/>
+          <div style="text-align: justify;">Capital Engineering Consultancy is an established consulting firm in United Arab Emirates since 2006 and having multiple satellite offices in the region, 
+          India, Iraq, KSA, UK with specialized expertise in Engineering Consultancy, Designing of Residential, Commercial Industrial Developments, Institutional, 
+          Hotel, Leisure Facilities, Oil & Gas, Road and Infrastructure, Environmental Solutions, BIM services etc. 
+          Our designs are unique in concept, bold in execution and at the same time, responsive to the client’s diverse requirements.
+          Our rapid growth and 
+          impressive list of clients bear testimony to our commitment to produce the best in every project we are commissioned to undertake. </div>
+          <div style="margin-top: 20px; text-align: justify; ">
+          Our rapid growth and impressive list of clients bear testimony to our commitment to produce the best in every project we are commissioned to undertake.
+          Having designed and executed works for clients ranging from Sharjah Ruler’s office, Dubai Metro, large Real Estate Developers, Corporations, Leading Contractors and Individuals,
+          we are now in an enviable position of being better equipped to deliver successfully, designs for jobs of any size, nature and complexity.
+          These include schools, residential complexes, villa complexes, leisure facilities, industrial buildings, industrial plants, cooling plants, etc.
+          At CAPITAL, we focus deeply on the design potential of each work, converting it into built reality, within the time frame and budget provided. 
+        </div>
+        <p style="text-align: justify; margin-top: 50px;"><img src="images/left.jpg" align="left" width="500px" height="380px"valign="middle" vspace="5" hspace="5" style="margin-right: 30px;"/>
+        <div style="text-align: justify;">
+          To maintain effective and high standards of service offered to our clients, positive efforts are made to recruit the best Architects,
+          Engineers and then train them to ensure CAPITAL remains at the forefront of all disciplines.
+          Our staff have decades of experience in their profession, with dedication and commitment to the jobs assigned to them
+          At CAPITAL, we focus deeply on the design potential of each work, converting it into built reality, within the time frame and budget provided.
+          To maintain effective and high standards of service offered to our clients, positive efforts are made to recruit the best Architects,
+          Engineers and then train them to ensure CAPITAL remains at the forefront of all disciplines. 
+          </div>
+          <div style=" margin-top: 20px;text-align: justify;"> 
+            Our staff have decades of experience in their profession, with dedication and commitment to the jobs assigned to them.
+            Core activity of our company is Architectural & Structural Design of Industrial Buildings / Plants.
+            Our Engineers have vast experience to fulfill our client’s requirements.
+            We are designers aiming to build relationship, concept and designs with our clients and the communities we work within.
+            We are committed to bring out innovative design incorporating international standards.Working across sectors as diverse as civic,
+            commercial, cultural, hospitality, retail, health, education, industry and transport our wealth of experience allows us to be at
+            the forefront of today’s creative industries pushing boundaries and always innovating.</p>
+          </div>
+        <h1 class="text-primary text-center mb-4 mt-3">Our Apperciations</h1>
+                
+                <div class="slideshow-container">
+
+                    <div class="mySlides fadex">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="hi.jpg" style="width:100%">
+                      <div class="text">Caption Text</div>
+                    </div>
+                    
+                    <div class="mySlides fadex">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="hi.jpg" style="width:100%">
+                      <div class="text">Caption Two</div>
+                    </div>
+                    
+                    <div class="mySlides fadex">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="hi.jpg" style="width:100%">
+                      <div class="text">Caption Three</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    
+
+    
+    <script src="js/main.js"></script>
+    <script>
+   let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+        </script>
+   
+</body>
+
+</html>

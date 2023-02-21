@@ -1,0 +1,172 @@
+/**********************/
+/*     Navigation     */
+/**********************/
+.navbar {
+	background-color: #ffffff;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 0.5rem;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* .navbar .navbar-brand {
+	padding-top: 0.25rem;
+	padding-bottom: 0.21rem;
+} */
+
+.navbar .logo-image img {
+    width: 300px;
+}
+
+.navbar .logo-text {
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1rem;
+	text-decoration: none;
+}
+
+.navbar .larger-devices {
+	display: none;
+}
+
+
+.offcanvas-collapse {
+	position: fixed;
+	top: 1.25rem; /* adjusts the height between the top of the page and the offcanvas menu */
+	bottom: 0;
+	left: 100%;
+	width: 100%;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	overflow-y: auto;
+	visibility: hidden;
+	background-color: #2a3e57;
+	transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+	transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.offcanvas-collapse.open {
+	visibility: visible;
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+.navbar .nav-item .nav-link {
+	padding-top: 0.625rem;
+	padding-bottom: 0.625rem;
+	color: #2a3e57;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.navbar .nav-item.dropdown.show .nav-link,
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+	color: #e1293b;
+}
+
+/* Dropdown Menu */
+.navbar .dropdown .dropdown-menu {
+	animation: fadeDropdown 0.2s; /* required for the fade animation */
+}
+
+.navbar .navbar-toggler {
+	padding: 0;
+	border: none;
+	font-size: 1.25rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+}
+.cont-container{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    /* background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(../images/images.jfif); */
+    background-position: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col{
+    flex-basis: 100%;
+}
+
+/* h5{
+    color: #fff;
+} */
+
+p{
+    color:black;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.card{
+    width: 250px;
+    height: 280px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.card h5{
+    margin-top: 10%;
+}
+
+.card1{
+    background-image: url(../images/latest-videos-1.jpg);
+}
+.card2{
+    background-image: url(../images/latest-videos-2.jpg);
+}
+.card3{
+    background-image: url(../images/latest-videos-3.jpg);
+}
+.card4{
+    background-image: url(../images/latest-videos-4.jpg);
+}
+.card5{
+    background-image: url(../images/latest-videos-5.jpg);
+}
+.card6{
+    background-image: url(../images/latest-videos-6.jpg);
+}
+.card7{
+    background-image: url(../images/latest-videos-7.jpg);
+}
+.card8{
+    background-image: url(../images/latest-videos-8.jpg);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+h5{
+    color: black;
+    text-shadow: 0 0 5px #999;
+}
+
+.card p{
+    text-shadow: 0 0 15px #000;
+    font-size: 15px;
+}

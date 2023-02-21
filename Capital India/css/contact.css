@@ -1,0 +1,365 @@
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+  
+  * {
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fff;
+  }
+  *, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  
+  body, button, input {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+  }
+  
+  .background {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .container1 {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .screen {
+    position: relative;
+    background: #fdfcfc;
+    border-radius: 15px;
+    height: 10cm;
+    width: 20cm;
+  }
+  
+  .screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(58, 58, 58, 0.951);
+    z-index: -1;
+  }
+  
+  
+  
+  .screen-body {
+    display: flex;
+  }
+  
+  .screen-body-item {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #ea1d6f;
+    font-size: 26px;
+  }
+  
+  .app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #ea1d6f;
+  }
+  
+  .app-contact {
+    margin-top: auto;
+    font-size: 8px;
+    color: #666;
+  }
+  
+  .app-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .app-form-group.message {
+    margin-top: 40px;
+  }
+  
+  .app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+  }
+  
+  .app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #acacac;
+    color: #0e0e0e;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .app-form-control::placeholder {
+    color: #666;
+  }
+  
+  .app-form-control:focus {
+    border-bottom-color: #ddd;
+  }
+  
+  .app-form-button {
+    background: none;
+    border: none;
+    color: #ea1d6f;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .app-form-button:hover {
+    color: #b9134f;
+  }
+  
+ 
+  
+  .dribbble {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+  }
+  
+  @media screen and (max-width: 520px) {
+    .screen-body {
+      flex-direction: column;
+    }
+  
+    .screen-body-item.left {
+      margin-bottom: 30px;
+    }
+  
+    .app-title {
+      flex-direction: row;
+    }
+  
+    .app-title span {
+      margin-right: 12px;
+    }
+  
+    .app-title:after {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .screen-body {
+      padding: 40px;
+    }
+  
+    .screen-body-item {
+      padding: 0;
+    }
+  }
+  
+  
+  .cards {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 7rem 5vw;
+    padding: 0;
+    list-style-type: none;
+    padding-left: 2.4cm;
+ 
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 350px;
+    width: 8cm;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0px 0px 25px rgba(58, 58, 58, 0.951);
+  }
+  
+  .card__image {      
+    width: 100%;
+    height: auto;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; 
+     
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+
+  }
+   .card:hover {
+    transform: translateY(0);
+    box-shadow: 0px 0px 25px rgba(120, 154, 242, 0.996);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+    height: 3cm;
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 100px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z"); 
+  }       
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+    
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;      
+  }
+  
+  .card__title {
+    font-size: 1.5em;
+    margin: 0 0 .3em;
+    color: #000000;
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";  
+    font-size: .8em; 
+    color: #050505;  
+  }
+  
+  .card__status {
+    font-size: .8em;
+    color: #090909;
+  }
+  
+  .card__description {
+    padding: 0 1em 2em;
+    margin: 0;
+    color: #070707;
+    font-family: "MockFlowFont";   
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    height: 3cm;
+  }    
+
+
+
+  *{
+    margin: 0;
+    padding: 0;
+}
+.banner{
+    height: 40vh;
+    position: relative; 
+    background-image: url("/images/cover.jpg");
+     background-size:cover;
+    
+     
+}
+.container1{
+    width: 80%;
+    margin: auto;
+}
+.navpanel{
+    border-bottom:1px solid grey;
+padding: 10px;
+    overflow: hidden;
+}
+.navpanel img{
+    float: left;
+}
+.navpanel ul{
+    float:right;
+}
+.banner .container1 .navpanel ul li{
+    display: inline-block;
+    font-family: 'Noto Sans JP' sans-serif;
+}
+.banner .container1 .navpanel ul li a{
+    text-decoration: none;
+    color:#fff;
+    padding: 10px 21px;
+}
+.titles{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+.titles .bigtitle{
+    margin-top: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 10.5px;
+    color: #fff;
+    font-size: 63px;
+}
+@media only screen and (max-width:794px){
+    .titles .bigtitle{
+        font-size: 30px;
+    }
+}
