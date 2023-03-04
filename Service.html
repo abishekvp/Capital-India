@@ -28,21 +28,38 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        nav .container{
+          position: fixed;
+          height: 10%;
+          background-color: white;
+          top: 0;
+        }
+        .navbar-collapse{
+          margin-left: 18%;
+          justify-content: space-between;
+          text-align: right;
+        }
+        .navbar-collapse ul li a{
+          font-weight: 580;
+        }
+      </style>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
-            <a class="logo" href="index.html"><img src="images/cclogo.png" alt="alternative"></a>
+            <a class="logo-image larger-devices" href="index.html"><img src="images/cclogo.png" alt="alternative"></a>
+            <!-- <a class="navbar-brand logo-image mobile-only" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  -->
             <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="navbar-collapse offcanvas-collapse">
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="./index.html">HOME</a>
+                        <a class="nav-link page-scroll" href="./index.html#header">HOME <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="./AboutUs.html">ABOUT US</a>
@@ -54,7 +71,7 @@
                         <a class="nav-link page-scroll" href="./Projects.html">PROJECTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="https://capitalengg.com/jobs">CAREERS</a>
+                        <a class="nav-link page-scroll" href="https://capitalengg.com/jobs/">CAREERS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="./Contact.html">CONTACT US</a>
@@ -63,12 +80,6 @@
             </div>
         </div>
     </nav>
-
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
-    </div>
-    <!-- Spinner End -->
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
