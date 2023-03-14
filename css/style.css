@@ -151,7 +151,7 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/carousel-2.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .626), rgba(0, 0, 0, 0.626)), url(/images/services.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -647,7 +647,7 @@ h6,
 
 .nav-item{
     color: #000000;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .navbar .logo-text {
@@ -749,3 +749,6 @@ h6,
 	border: none;
 	font-size: 1.25rem;
 }
+
+
+

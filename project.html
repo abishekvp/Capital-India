@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Our Projects</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .cardarr {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 5rem;
+      margin: 8rem 7vw;
+      padding: 0;
+      list-style-type: none;
+
+    }
+
+    .wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    .cardme {
+
+
+      height: 260px;
+      border-radius: 15px;
+      padding: 1.5rem;
+      background: white;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      transition: 0.4s ease-out;
+      box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .cardme:hover {
+      transform: translateY(20px);
+    }
+
+    .cardme:hover:before {
+      opacity: 1;
+    }
+
+    .cardme:hover .info {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    .cardme:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    .cardme img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 15px;
+    }
+
+    .cardme .info {
+      position: relative;
+      z-index: 3;
+      color: white;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.5s;
+    }
+
+    .cardme .info h1 {
+      margin: 0px;
+    }
+
+    .cardme .info p {
+      letter-spacing: 1px;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+
+    .cardme .info button {
+      padding: 0.6rem;
+      outline: none;
+      border: none;
+      border-radius: 3px;
+      background: white;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.4s ease;
+      align-items: center;
+    }
+
+    .cardme .info button:hover {
+      background: dodgerblue;
+      color: white;
+    }
+
+
+    nav .container {
+      background: color;
+    }
+  </style>
+
+
+  <link rel="icon" href="images/favicon.png">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+    rel="stylesheet">
+
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/projects.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav style="position:fixed;z-index:99;" class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <style>
+        .navbar .container {
+          position: fixed;
+          background-color: white;
+          top: 0;
+          height: 13%;
+        }
+
+        .navbar-collapse {
+          margin-left: 17%;
+        }
+      </style>
+      <a class="logo-image larger-devices" href="index.html"><img src="images/cclogo.png" alt="alternative"></a>
+      <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto mr-auto">
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="./index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="./AboutUs.html">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="./Service.html">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="./Project.html">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="https://capitalengg.com/jobs/">CAREERS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="./Contact.html">CONTACT US</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid page-header py-5 mb-5" style="margin:7% 0 0 0;">
+    <div class="container py-5">
+      <center>
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Projects</h1>
+      </center>
+
+    </div>
+  </div>
+
+  <div class="container-xxl py-5">
+    <div class="container">
+
+
+      <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.5s">
+        <div class="col-lg-4 col-md-6 portfolio-item first">
+          <div class="cardme "><img src="/images/projects/ER2.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">ADICHANALLUR MUSEUM PROJECT</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item second">
+          <div class="cardme "><img src="/images/projects/View-2.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">AMMA PROJECT</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img src="/images/projects/View-2.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">ARTS COLLEGE JUNCTION PROJECT</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item first">
+          <div class="cardme "><img
+              src="/images/projects/Foyer.jpeg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">BAASHYAM INTERIORS PROJECT</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item second">
+          <div class="cardme "><img
+              src="/images/projects/2.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">BELGAVI AIRPORT LANDSCAPE PROJECT</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/O3 R1.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">CAMPCO PROJECT</h5>
+          </div>
+        </div>
+       
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">CHINTADRIPET PROJECT</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">EUGENE MYNE FARMHOUSE PROJECT</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/ren 2.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">GREATER CHENNAI POLICE PROJECT</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/2022-04-26_Option 03 -View 01.png" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">KARIKALAN PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">KAVARATTI LAKSHADWEEP PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">KERALA TEAM</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/Korattur 3D R1.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">KORATTUR JERAULD PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/03.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">KUMBAKONAM TOURIST PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/R001.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">LIC PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src=""/>
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">MULLSERY CANAL KERALA</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/FINAL FRONT ELEVATION.jpeg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">PAMMAL RESIDENCE PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">PARADIP PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/E1.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">POND RENOVATION PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">RAINDROP HOTEL PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/view 01.png" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">SIDBI PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/Enscape_2022-02-24-11-57-59.png" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">SRK VILLA PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/Vijayavada Park_5 - Photo.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">VIJAYAWADA PARK PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/37.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">VIJAYAWADA RYVES CANAL PROJECT</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item third">
+          <div class="cardme "><img
+              src="/images/projects/R2.jpg" />
+
+            <div class="info">
+
+              <button class="mx-3" style="width: 200px;">Read More</button>
+            </div>
+          </div>
+          <div class="pt-3">
+
+            <br>
+            <h5 class="lh-base">VILLA LANDSCAPE PROJECT</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

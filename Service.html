@@ -9,12 +9,14 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="images/favicon.ico" rel="icon">
+    <link rel="icon" href="images/favicon.png">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -28,23 +30,27 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/popup.css" rel="stylesheet">
     <style>
-        nav .container{
-          position: fixed;
-          height: 10%;
-          background-color: white;
-          top: 0;
+        nav .container {
+            position: fixed;
+            height: 10%;
+            background-color: white;
+            top: 0;
         }
-        .navbar-collapse{
-          margin-left: 18%;
-          justify-content: space-between;
-          text-align: right;
+
+        .navbar-collapse {
+            margin-left: 18%;
+            justify-content: space-between;
+            text-align: right;
         }
-        .navbar-collapse ul li a{
-          font-weight: 580;
+
+        .navbar-collapse ul li a {
+            font-weight: 580;
         }
-      </style>
+    </style>
 </head>
 
 <body>
@@ -59,7 +65,8 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="./index.html#header">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="./index.html">HOME <span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="./AboutUs.html">ABOUT US</a>
@@ -68,7 +75,7 @@
                         <a class="nav-link page-scroll" href="./Service.html">SERVICES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="./Projects.html">PROJECTS</a>
+                        <a class="nav-link page-scroll" href="./Project.html">PROJECTS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="https://capitalengg.com/jobs/">CAREERS</a>
@@ -83,9 +90,10 @@
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <h1 class="display-3 text-white animated slideInRight">Capital Engineering Consultancy</h1>
-            
+        <div style="margin-top: 5%;" class="container py-5">
+            <center>
+                <h2 style="color: white;">Our Services</h2>
+            </center>
         </div>
     </div>
     <!-- Page Header End -->
@@ -94,294 +102,357 @@
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="fw-medium text-uppercase text-primary mb-2">Our Services</p>
-                <h1 class="display-5 mb-4">We Provide Best efficient and quality building systems</h1>
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 1200px;">
+                <h3>We are experts and specialists to create efficient and quality building systems and infrastructure
+                    without compromising the Aesthetic Design.</h3>
             </div>
             <div class="row gy-5 gx-4">
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
-                        <img class="img-fluid" src="images/service-1.jpg" alt="">
+                        <img class="img-fluid" src="images/ArchitectureDesign.png" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="images/service-1.jpg" alt="">
+                            <img class="img-fluid" src="images/ArchitectureDesign.png" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
                                 <hr class="w-25">
-                                <h3 class="mb-0">ARCHITECTURE & DESIGN</h3>
+                                <h4>ARCHITECTURE & DESIGN</h4>
                                 <hr class="w-25">
                             </div>
                             <div class="service-text">
-                                <p class="text-white mb-0">Mechanical, Electrical, Plumbing, and Fire system designs are the lifelines of any building, and it is important they are developed with utmost accuracy and perfection. </p>
+                                <p class="text-white mb-0">Capital Engineering Consultancy is one of the leading
+                                    Consultancies in the U.AE. Over the past decade, we have worked on various projects
+                                    ranging from the concept stage to detail drawings stage to authority submissions and
+                                    construction stage.</p>
                             </div>
                         </div>
-                        <a class="btn btn-light" href="">Read More</a>
+                        <a class="btn btn-light" id="popup-button" onclick="showPopup('popup1')">Open Popup</a>
+
+                        <!--<button id="popup-button">Open Popup</button>-->
+                        <div id="popup1" class="popup">
+                            <div class="popup-cont">
+                                <p>Suspendisse sodales nisl ac justo vestibulum scelerisque. Sed et semper turpis. Integer a
+                                    metus ac lacus viverra hendrerit in sit amet nunc. Donec sem ex, tincidunt ac velit vel,
+                                    ornare sodales lacus. Vivamus vel ipsum libero. Sed malesuada auctor sapien, vel
+                                    faucibus sapien congue vel. Sed id justo eget quam dapibus suscipit a non sem.
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                    egestas. Nulla interdum tortor sed leo feugiat, nec bibendum est feugiat. Fusce sit amet
+                                    lacus eu eros pretium dictum vel eu quam. Fusce rutrum convallis enim vel tristique.</p>
+                                <div class="image-container">
+                                    <img class="img-fluid" src="images/solar1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="close-button" onclick="hidePopup('popup1')"><button>X</button></div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
-                        <img class="img-fluid" src="images/service-2.jpg" alt="">
+                        <img class="img-fluid" src="images/MEP.png" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="images/service-2.jpg" alt="">
+                            <img class="img-fluid" src="images/MEP.png" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
                                 <hr class="w-25">
-                                <h3 class="mb-0">MEP SERVICES</h3>
+                                <h4>MEP SERVICES</h4>
                                 <hr class="w-25">
                             </div>
                             <div class="service-text">
-                                <p class="text-white mb-0">Mechanical, Electrical, Plumbing, and Fire system designs are the lifelines of any building, and it is important they are developed with utmost accuracy and perfection. </p>
+                                <p class="text-white mb-0">Capital Engineering Consultancy is a multi-disciplinary
+                                    engineering consultancy offering a range of MEP design services including HVAC,
+                                    electrical, plumbing, fire protection, and security and information technology
+                                    systems.</p>
                             </div>
                         </div>
-                        <a class="btn btn-light" href="">Read More</a>
+                        <a class="btn btn-light" id="popup-button" onclick="showPopup('popup2')">Open Popup</a>
+
+                        <!--<button id="popup-button">Open Popup</button>-->
+                        <div id="popup2" class="popup">
+                            <div class="popup-cont">
+                                <p>Suspendisse sodales nisl ac justo vestibulum scelerisque. Sed et semper turpis. Integer a
+                                    metus ac lacus viverra hendrerit in sit amet nunc. Donec sem ex, tincidunt ac velit vel,
+                                    ornare sodales lacus. Vivamus vel ipsum libero. Sed malesuada auctor sapien, vel
+                                    faucibus sapien congue vel. Sed id justo eget quam dapibus suscipit a non sem.
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                    egestas. Nulla interdum tortor sed leo feugiat, nec bibendum est feugiat. Fusce sit amet
+                                    lacus eu eros pretium dictum vel eu quam. Fusce rutrum convallis enim vel tristique.</p>
+                                <div class="image-container">
+                                    <img class="img-fluid" src="images/solar1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="close-button" onclick="hidePopup('popup2')"><button>X</button></div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
-                        <img class="img-fluid" src="images/service-3.jpg" alt="">
+                        <img class="img-fluid" src="images/BIMServices_comp.png" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="images/service-3.jpg" alt="">
+                            <img class="img-fluid" src="images/BIMServices_comp.png" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
                                 <hr class="w-25">
-                                <h3 class="mb-0">ENGINEERING</h3>
+                                <h4>STRUCTURAL ENGINEERING</h4>
                                 <hr class="w-25">
                             </div>
                             <div class="service-text">
-                                <p class="text-white mb-0">Mechanical, Electrical, Plumbing, and Fire system designs are the lifelines of any building, and it is important they are developed with utmost accuracy and perfection. </p>
+                                <p class="text-white mb-0">Capital Engineering Consultancy and all its branches in the
+                                    UAE is officially registered as an ISO-9001 compliant operation.For over a decade,
+                                    we have been one of the top structural consultants in the UAE, with our
+                                    professionals having a keen passion for and tremendous experience in Structural
+                                    Engineering and Design.</p>
                             </div>
                         </div>
-                        <a class="btn btn-light" href="">Read More</a>
+                        <a class="btn btn-light" id="popup-button" onclick="showPopup('popup3')">Open Popup</a>
+
+                        <!--<button id="popup-button">Open Popup</button>-->
+                        <div id="popup3" class="popup">
+                            <div class="popup-cont">
+                                <p>Suspendisse sodales nisl ac justo vestibulum scelerisque. Sed et semper turpis. Integer a
+                                    metus ac lacus viverra hendrerit in sit amet nunc. Donec sem ex, tincidunt ac velit vel,
+                                    ornare sodales lacus. Vivamus vel ipsum libero. Sed malesuada auctor sapien, vel
+                                    faucibus sapien congue vel. Sed id justo eget quam dapibus suscipit a non sem.
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                    egestas. Nulla interdum tortor sed leo feugiat, nec bibendum est feugiat. Fusce sit amet
+                                    lacus eu eros pretium dictum vel eu quam. Fusce rutrum convallis enim vel tristique.</p>
+                                <div class="image-container">
+                                    <img class="img-fluid" src="images/solar1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="close-button" onclick="hidePopup('popup3')"><button>X</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="images/BIMServices_comp.png" alt="">
+                        <div class="service-img">
+                            <img class="img-fluid" src="images/BIMServices_comp.png" alt="">
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-25">
+                                <h4>CONSTRUCTION & CONSTRUCTION MANAGEMENT</h4>
+                                <hr class="w-25">
+                            </div>
+                            <div class="service-text">
+                                <p class="text-white mb-0">Capital Engineering Consultancy and all its branches in the
+                                    UAE is officially registered as an ISO-9001 compliant operation.For over a decade,
+                                    we have been one of the top structural consultants in the UAE, with our
+                                    professionals having a keen passion for and tremendous experience in Structural
+                                    Engineering and Design.</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light" id="popup-button" onclick="showPopup('popup4')">Open Popup</a>
+
+                        <!--<button id="popup-button">Open Popup</button>-->
+                        <div id="popup4" class="popup">
+                            <div class="popup-cont">
+                                <p>Suspendisse sodales nisl ac justo vestibulum scelerisque. Sed et semper turpis. Integer a
+                                    metus ac lacus viverra hendrerit in sit amet nunc. Donec sem ex, tincidunt ac velit vel,
+                                    ornare sodales lacus. Vivamus vel ipsum libero. Sed malesuada auctor sapien, vel
+                                    faucibus sapien congue vel. Sed id justo eget quam dapibus suscipit a non sem.
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                    egestas. Nulla interdum tortor sed leo feugiat, nec bibendum est feugiat. Fusce sit amet
+                                    lacus eu eros pretium dictum vel eu quam. Fusce rutrum convallis enim vel tristique.</p>
+                                <div class="image-container">
+                                    <img class="img-fluid" src="images/solar1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="close-button" onclick="hidePopup('popup4')"><button>X</button></div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
-                        <img class="img-fluid" src="images/service-1.jpg" alt="">
+                        <img class="img-fluid" src="images/service-16comp12.png" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="images/service-1.jpg" alt="">
+                            <img class="img-fluid" src="images/service-16comp12.png" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
                                 <hr class="w-25">
-                                <h3 class="mb-0">PROJECT MANAGEMENT CONSULTANCY
-                                </h3>
+                                <h4>PROJECT MANAGEMENT CONSULTANCY</h4>
                                 <hr class="w-25">
                             </div>
                             <div class="service-text">
-                                <p class="text-white mb-0">Mechanical, Electrical, Plumbing, and Fire system designs are the lifelines of any building, and it is important they are developed with utmost accuracy and perfection.</p>
+                                <p class="text-white mb-0">Capital Engineering Consultancy provides integrated and
+                                    multidisciplinary services throughout the entire life cycle of any construction
+                                    project, from the initial feasibility studies and concepts all the way through the
+                                    various stages of the design, tendering and procurement, construction, testing and
+                                    commissioning stage.</p>
                             </div>
                         </div>
-                        <a class="btn btn-light" href="">Read More</a>
+                        <a class="btn btn-light" id="popup-button" onclick="showPopup('popup5')">Open Popup</a>
+
+                        <!--<button id="popup-button">Open Popup</button>-->
+                        <div id="popup5" class="popup">
+                            <div class="popup-cont">
+                                <p>Suspendisse sodales nisl ac justo vestibulum scelerisque. Sed et semper turpis. Integer a
+                                    metus ac lacus viverra hendrerit in sit amet nunc. Donec sem ex, tincidunt ac velit vel,
+                                    ornare sodales lacus. Vivamus vel ipsum libero. Sed malesuada auctor sapien, vel
+                                    faucibus sapien congue vel. Sed id justo eget quam dapibus suscipit a non sem.
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                    egestas. Nulla interdum tortor sed leo feugiat, nec bibendum est feugiat. Fusce sit amet
+                                    lacus eu eros pretium dictum vel eu quam. Fusce rutrum convallis enim vel tristique.</p>
+                                <div class="image-container">
+                                    <img class="img-fluid" src="images/solar1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="close-button" onclick="hidePopup('popup5')"><button>X</button></div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
-                        <img class="img-fluid" src="images/service-2.jpg" alt="">
+                        <img class="img-fluid" src="images/Environmental-pic.png" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="images/service-2.jpg" alt="">
+                            <img class="img-fluid" src="images/Environmental-pic.png" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
                                 <hr class="w-25">
-                                <h3 class="mb-0">ENVIRONMENTAL SOLUTIONS</h3>
+                                <h4>ENVIRONMENTAL SOLUTIONS</h4>
                                 <hr class="w-25">
                             </div>
                             <div class="service-text">
-                                <p class="text-white mb-0">Mechanical, Electrical, Plumbing, and Fire system designs are the lifelines of any building, and it is important they are developed with utmost accuracy and perfection. </p>
+                                <p class="text-white mb-0">Capital Engineering Consultancy is a professional firm with
+                                    excellence in providing environmental, health and safety advisory and consulting
+                                    services and expertise to clients in public and private sectors in the Middle East.
+                                </p>
                             </div>
                         </div>
-                        <a class="btn btn-light" href="">Read More</a>
+                        <a class="btn btn-light" id="popup-button" onclick="showPopup('popup6')">Open Popup</a>
+
+                        <!--<button id="popup-button">Open Popup</button>-->
+                        <div id="popup6" class="popup">
+                            <div class="popup-cont">
+                                <p>Suspendisse sodales nisl ac justo vestibulum scelerisque. Sed et semper turpis. Integer a
+                                    metus ac lacus viverra hendrerit in sit amet nunc. Donec sem ex, tincidunt ac velit vel,
+                                    ornare sodales lacus. Vivamus vel ipsum libero. Sed malesuada auctor sapien, vel
+                                    faucibus sapien congue vel. Sed id justo eget quam dapibus suscipit a non sem.
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                    egestas. Nulla interdum tortor sed leo feugiat, nec bibendum est feugiat. Fusce sit amet
+                                    lacus eu eros pretium dictum vel eu quam. Fusce rutrum convallis enim vel tristique.</p>
+                                <div class="image-container">
+                                    <img class="img-fluid" src="images/solar1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="close-button" onclick="hidePopup('popup6')"><button>X</button></div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
-                        <img class="img-fluid" src="images/service-3.jpg" alt="">
+                        <img class="img-fluid" src="images/Landscaping_comp.png" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="images/service-3.jpg" alt="">
+                            <img class="img-fluid" src="images/Landscaping_comp.png" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
                                 <hr class="w-25">
-                                <h3 class="mb-0">LANDSCAPING</h3>
+                                <h4>LANDSCAPING</h4>
                                 <hr class="w-25">
                             </div>
                             <div class="service-text">
-                                <p class="text-white mb-0">Mechanical, Electrical, Plumbing, and Fire system designs are the lifelines of any building, and it is important they are developed with utmost accuracy and perfection. </p>
+                                <p class="text-white mb-0">Capital Engineering offers full services for Soft Landscape
+                                    and Hard Landscape design. Our professionalism delivers essential quality and
+                                    balance to perform a high quality and creative landscape to promote common to extra
+                                    ordinary Design.</p>
                             </div>
                         </div>
-                        <a class="btn btn-light" href="">Read More</a>
+                        <a class="btn btn-light" id="popup-button" onclick="showPopup('popup7')">Open Popup</a>
+
+                        <!--<button id="popup-button">Open Popup</button>-->
+                        <div id="popup7" class="popup">
+                            <div class="popup-cont">
+                                <p>Suspendisse sodales nisl ac justo vestibulum scelerisque. Sed et semper turpis. Integer a
+                                    metus ac lacus viverra hendrerit in sit amet nunc. Donec sem ex, tincidunt ac velit vel,
+                                    ornare sodales lacus. Vivamus vel ipsum libero. Sed malesuada auctor sapien, vel
+                                    faucibus sapien congue vel. Sed id justo eget quam dapibus suscipit a non sem.
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                    egestas. Nulla interdum tortor sed leo feugiat, nec bibendum est feugiat. Fusce sit amet
+                                    lacus eu eros pretium dictum vel eu quam. Fusce rutrum convallis enim vel tristique.</p>
+                                <div class="image-container">
+                                    <img class="img-fluid" src="images/solar1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="close-button" onclick="hidePopup('popup7')"><button>X</button></div>
+                        </div>
                     </div>
                 </div>
 
+
+
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
-                        <img class="img-fluid" src="images/service-3.jpg" alt="">
+                        <img class="img-fluid" src="images/Interiot-Fitout.png" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="images/service-3.jpg" alt="">
+                            <img class="img-fluid" src="images/Interiot-Fitout.png" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
                                 <hr class="w-25">
-                                <h3 class="mb-0">OIL & GASt</h3>
+                                <h4>FIT OUT AND INTERIOR DESIGN</h4>
                                 <hr class="w-25">
                             </div>
                             <div class="service-text">
-                                <p class="text-white mb-0">Mechanical, Electrical, Plumbing, and Fire system designs are the lifelines of any building, and it is important they are developed with utmost accuracy and perfection. </p>
+                                <p class="text-white mb-0">Our Interior Design Team specializes in providing consultancy
+                                    services for Residential, Commercial & Hospitality projects. So far, we have taken
+                                    1361 permits.</p>
                             </div>
                         </div>
-                        <a class="btn btn-light" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="images/service-3.jpg" alt="">
-                        <div class="service-img">
-                            <img class="img-fluid" src="images/service-3.jpg" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <div class="service-title">
-                                <hr class="w-25">
-                                <h3 class="mb-0">ROAD AND INFRASTRUCTURE</h3>
-                                <hr class="w-25">
+
+                        <a class="btn btn-light" id="popup-button" onclick="showPopup('popup8')">Open Popup</a>
+
+                        <!--<button id="popup-button">Open Popup</button>-->
+                        <div id="popup8" class="popup">
+                            <div class="popup-cont">
+                                <p>Suspendisse sodales nisl ac justo vestibulum scelerisque. Sed et semper turpis. Integer a
+                                    metus ac lacus viverra hendrerit in sit amet nunc. Donec sem ex, tincidunt ac velit vel,
+                                    ornare sodales lacus. Vivamus vel ipsum libero. Sed malesuada auctor sapien, vel
+                                    faucibus sapien congue vel. Sed id justo eget quam dapibus suscipit a non sem.
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                    egestas. Nulla interdum tortor sed leo feugiat, nec bibendum est feugiat. Fusce sit amet
+                                    lacus eu eros pretium dictum vel eu quam. Fusce rutrum convallis enim vel tristique.</p>
+                                <div class="image-container">
+                                    <img class="img-fluid" src="images/solar1.png" alt="">
+                                </div>
                             </div>
-                            <div class="service-text">
-                                <p class="text-white mb-0">Mechanical, Electrical, Plumbing, and Fire system designs are the lifelines of any building, and it is important they are developed with utmost accuracy and perfection. </p>
-                            </div>
+                            <div class="close-button" onclick="hidePopup('popup8')"><button>X</button></div>
                         </div>
-                        <a class="btn btn-light" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="images/service-3.jpg" alt="">
-                        <div class="service-img">
-                            <img class="img-fluid" src="images/service-3.jpg" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <div class="service-title">
-                                <hr class="w-25">
-                                <h3 class="mb-0">BIM SERVICES</h3>
-                                <hr class="w-25">
-                            </div>
-                            <div class="service-text">
-                                <p class="text-white mb-0">Mechanical, Electrical, Plumbing, and Fire system designs are the lifelines of any building, and it is important they are developed with utmost accuracy and perfection. </p>
-                            </div>
-                        </div>
-                        <a class="btn btn-light" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="images/service-3.jpg" alt="">
-                        <div class="service-img">
-                            <img class="img-fluid" src="images/service-3.jpg" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <div class="service-title">
-                                <hr class="w-25">
-                                <h3 class="mb-0">FIT OUT AND INTERIOR DESIGN</h3>
-                                <hr class="w-25">
-                            </div>
-                            <div class="service-text">
-                                <p class="text-white mb-0">Mechanical, Electrical, Plumbing, and Fire system designs are the lifelines of any building, and it is important they are developed with utmost accuracy and perfection. </p>
-                            </div>
-                        </div>
-                        <a class="btn btn-light" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="images/service-3.jpg" alt="">
-                        <div class="service-img">
-                            <img class="img-fluid" src="images/service-3.jpg" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <div class="service-title">
-                                <hr class="w-25">
-                                <h3 class="mb-0">POWER SECTOR</h3>
-                                <hr class="w-25">
-                            </div>
-                            <div class="service-text">
-                                <p class="text-white mb-0">Mechanical, Electrical, Plumbing, and Fire system designs are the lifelines of any building, and it is important they are developed with utmost accuracy and perfection. </p>
-                            </div>
-                        </div>
-                        <a class="btn btn-light" href="">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Service End -->
 
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
+    <div class="copyright">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="fw-medium text-uppercase text-primary mb-2">Testimonial</p>
-                <h1 class="display-5 mb-5">What Our Clients Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="images/user.png">
-                        <div class="btn-square bg-primary rounded-circle">
-                            <i class="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-text text-center rounded p-4">
-                        <p>The Landscaping Professionals were quick, courteous and very helpful. They helped me restore my lawn and gardens completely after putting in my deck. I was worried it wouldn’t be done in time for my garden party, but they finished the job with time to spare!”</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="list-unstyled li-space-lg p-small">
+                        <li><a href="terms.html">Terms & Conditions </a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
                 </div>
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="images/user.png">
-                        <div class="btn-square bg-primary rounded-circle">
-                            <i class="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-text text-center rounded p-4">
-                        <p>The Landscaping Professionals were quick, courteous and very helpful. They helped me restore my lawn and gardens completely after putting in my deck. I was worried it wouldn’t be done in time for my garden party, but they finished the job with time to spare!”</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="images/user.png">
-                        <div class="btn-square bg-primary rounded-circle">
-                            <i class="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-text text-center rounded p-4">
-                        <p>The Landscaping Professionals were quick, courteous and very helpful. They helped me restore my lawn and gardens completely after putting in my deck. I was worried it wouldn’t be done in time for my garden party, but they finished the job with time to spare!”</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
+                <div class="col-lg-6">
+                    <p class="p-small statement">© 2023 Capitalengg . All rights reserved.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
 
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright bg-dark py-4">
-        <div class="container text-center">
-            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">capital Engineering Consultancy</a>, All Right Reserved.</p>
-            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-            <p class="mb-0">Designed By <a class="fw-semi-bold" href="https://rook.co.in">ROOK FELLOWS</a></p>
-        </div>
-    </div>
     <!-- Copyright End -->
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -395,6 +466,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 
 </html>

@@ -628,17 +628,17 @@ input[type='checkbox'] {
 }
 
 .header .swiper-container .swiper-slide.first {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(145, 74, 218, 0)), url('../images/office.jpg') center center no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(145, 74, 218, 0)), url('../images/slider1.jpg') center center no-repeat;
 	background-size: cover; 
 }
 
 .header .swiper-container .swiper-slide.second {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(145, 74, 218, 0)), url('../images/office2.webp') center center no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(145, 74, 218, 0)), url('../images/slider2.jpg') center center no-repeat;
 	background-size: cover; 
 }
 
 .header .swiper-container .swiper-slide.third {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(145, 74, 218, 0)), url('../images/header-background-3.jpg') center center no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(145, 74, 218, 0)), url('../images/slider3.jpg') center center no-repeat;
 	background-size: cover; 
 }
 
